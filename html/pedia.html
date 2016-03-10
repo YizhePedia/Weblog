@@ -1,8 +1,12 @@
 <div id="stadiv">
-	<iframe id="sframe" src="series.html">
-	</iframe>
-	<iframe id="tframe" src="titles.html">
-	</iframe>
-	<iframe id="aframe" src="http://t.cn/RGRIzOq" width="1000px" height="720px"	frameborder="0" scrolling="auto">
+	<div id="sframe">
+	</div>
+	<div id="tframe">
+	</div>
+	<iframe id="aframe" name="mpage" src='http://t.cn/RGEFsUd' onload="sizeAdjust('#aframe')" frameborder="0" scrolling="auto">
 	</iframe>
 </div>
+<script type="text/javascript">
+	updateContent('#sframe','series.html');
+	updateContent('#tframe','titles-0.html');
+</script>
