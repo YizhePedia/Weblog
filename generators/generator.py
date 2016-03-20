@@ -49,6 +49,8 @@ class generator:
         last_series = ""
         title_html = codecs.open(self.html_path+"titles-null.html","w","utf-8")
         for entry in self.wb_data:
+            if entry[wv]==0:
+                break
             if entry[wseries] != last_series:
                 title_html.close()
                 series_count += 1
@@ -68,11 +70,13 @@ class generator:
         series_html.close()    
         title_html.close()
 
+    def runner(self):
+        cg = generator()
+        cg.loadXLSX()
+        cg.generateHtml()
+
 # Auto-runner for testing
 if __name__=='__main__':
     cg = generator()
     cg.loadXLSX()
-    print(cg.wb_nrows)
-    print(cg.wb_ncols)
-    print(cg.wb_data)
     cg.generateHtml()
