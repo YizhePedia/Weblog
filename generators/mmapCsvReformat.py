@@ -47,13 +47,15 @@ class mmapCsvReformat():
         for row in self.data:
             series = row[0]
             topic = row[1]
-            keyword = self.mergeListToString(row[2:])
+            keyword = ""
+            if len(row)>2:
+                keyword = self.mergeListToString(row[2:])                            
             if topic!=last_topic:
                 new_data.append([series,topic,keyword])
                 last_topic = topic
             else:
                 # append string to last row            
-                new_data[-1][-1] += ("\n" + keyword)
+                new_data[-1][-1] += ("\n" + keyword)            
         self.data = new_data
     
     def csvOutput(self,fname):

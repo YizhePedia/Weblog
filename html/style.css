@@ -66,7 +66,7 @@ a{
 #tframe{
 	height:300px;
 	width:10%;
-	margin-left:50px;
+	margin-left:30px;
 	frameborder:0;
 	border:0;
 	marginwidth:0;
@@ -76,16 +76,30 @@ a{
 	float:left;
 }
 
+/* for aframe as div */
 #aframe{
-	width=1000px;
-	height=700px;
-	frameborder=0;
-	border=0;
-	marginwidth=0;
-	marginheight=0;
-	scrolling=auto;
-	allowtransparency=yes;
+	width:70%;
+	margin-bottom:100px;
+	float:left;	
+	border:0;
+	marginwidth:0;
+	marginheight:0;
+	scrolling:auto;
+	allowtransparency:yes;	
 }
+
+/* for aframe as iframe
+#aframe{
+	width:1000px;
+	height:700px;
+	frameborder:0;
+	border:0;
+	marginwidth:0;
+	marginheight:0;
+	scrolling:auto;
+	allowtransparency:yes;
+}
+*/
 
 .series_entry{
 	font-family:"Cutive Mono","宋体","黑体","Arial","Microsoft YaHei",sans-serif;
@@ -95,6 +109,12 @@ a{
 }
 
 .title_entry{
+	font-family:"Cutive Mono","宋体","黑体","Arial","Microsoft YaHei",sans-serif;
+	text-shadow:0px 0px 0.4px;
+	font-size:16px;
+	text-decoration:none;
+	border:none;
+	color:rgb(0,0,0);
 	padding-top:16px;
 }
 
